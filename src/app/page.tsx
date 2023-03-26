@@ -10,7 +10,6 @@ type Props = {
 
 export default async function Home({ searchParams }: Props) {
   const genre = searchParams && searchParams.genre;
-  console.log("sdsdsdsd", API_KEY);
 
   const res = await fetch(
     `https://api.themoviedb.org/3/${
@@ -23,7 +22,6 @@ export default async function Home({ searchParams }: Props) {
     throw new Error("failed to fetch data");
   }
   const data = await res.json();
-  console.log("dff", data);
   const result = data.results;
 
   return (
