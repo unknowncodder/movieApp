@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Provider from "@/components/Provider";
+import SearchBar from "@/components/SearchBar";
 import "./globals.css";
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
         <Provider>
           <Header />
           <Navbar />
-          {/* <div>search</div> */}
+          <SearchBar />
           {children}
         </Provider>
       </body>
