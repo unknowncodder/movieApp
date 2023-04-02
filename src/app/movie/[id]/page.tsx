@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { title } from "process";
 
-type Props = {};
-
 const getMovieInfo = async (movieId: string) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`
@@ -11,7 +9,7 @@ const getMovieInfo = async (movieId: string) => {
   return await res.json();
 };
 
-const MoviePage = async ({ params }: Props) => {
+const MoviePage = async ({ params }) => {
   const movieId = params.id;
   const movie = await getMovieInfo(movieId);
   const {
