@@ -1,9 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-type Props = {};
-
-const Error = ({ error, reset }: Props) => {
+const Error = ({ error, reset }) => {
   useEffect(() => {}, [error]);
 
   return (
