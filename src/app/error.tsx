@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-const Error = ({ error, reset }) => {
+const Error = ({ error, reset }: { error: Error; reset: () => void }) => {
   useEffect(() => {}, [error]);
 
   return (
